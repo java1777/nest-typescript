@@ -1,0 +1,27 @@
+{
+  "name": "nest-typescript",
+  "version": "1.0.0",
+  "description": "js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "task1": "npx tsx watch src/task-1.ts",
+    "task2": "npx tsx watch src/task-2.ts",
+    "task3": "npx tsx watch src/task-3.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/java1777/nest-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/java1777/nest-typescript/issues"
+  },
+  "homepage": "https://github.com/java1777/nest-typescript#readme",
+  "devDependencies": {
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+}

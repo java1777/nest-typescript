@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2020",                           // Transpilyatsiya qilinadigan JS versiyasi
+    "module": "commonjs",                         // Modul turi (Node.js uchun commonjs)
+    "rootDir": "./src",                           // Manba kod joylashgan papka
+    "outDir": "./dist",                           // Transpilyatsiya qilingan kod chiqadigan papka
+    "strict": true,                               // Qat'iy tekshiruvlarni yoqish
+    "esModuleInterop": true,                      // Import/export bilan moslashuvchanlik
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],                             // Qaysi fayllani o'qishi
+  "exclude": ["node_modules", "dist"]             // Qaysilarini tashab ketishi
+}
