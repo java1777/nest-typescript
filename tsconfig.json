@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6",            // JS versiyasi
+    "module": "commonjs",          // Node.js uchun mos
+    "strict": true,                // qat’iy tekshiruvlar
+    "esModuleInterop": true,       // importlarni osonlashtirish
+    "outDir": "./dist"             // kompilyatsiya natijasi
+  },
+  "include": ["main.ts"]
+}
