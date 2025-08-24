@@ -6,6 +6,8 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
     imports: [UserModule],
 
 })
+
+// Implement interface dan classga voris olish!!
 export class AppModule implements NestModule{
     configure(consumer: MiddlewareConsumer) {
         consumer

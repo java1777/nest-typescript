@@ -6,7 +6,7 @@ import { UpdateUserDto } from "./dto/update-user.dto";
 
 @Injectable()
 export class UserService {
-  private users: IUser[] = [];
+  private users: IUser[] = [];      // Bazani ornini qoplab turishi uchun Userni massivga orab qoydim!
 
   async create(createUserDto: CreateUserDto) {
     const newUser = { id: v4(), ...createUserDto };
@@ -29,7 +29,7 @@ export class UserService {
   async findOne(id: string) {
     const user = this.users.find((user:IUser) => user.id === id);
     if (!user) {
-      throw new NotFoundException('User not found');
+      throw new NotFoundException('User not found');    // Errorlani tutvoladi agar error chiqmasa pasga tushib ketvuradi
     }
     return {
       statusCode: 200,

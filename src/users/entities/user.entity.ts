@@ -3,3 +3,5 @@ export interface IUser {
     fullName?: string;
     age?: number;
 }
+
+// Databasaga taluqli narsala entity faylda boladi
