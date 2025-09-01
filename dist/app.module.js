@@ -11,9 +11,13 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const config_1 = require("@nestjs/config");
-const mongoose_1 = require("@nestjs/mongoose");
-const user_module_1 = require("./user/user.module");
-const post_module_1 = require("./post/post.module");
+const typeorm_1 = require("@nestjs/typeorm");
+const university_module_1 = require("./university/university.module");
+const group_module_1 = require("./group/group.module");
+const student_module_1 = require("./student/student.module");
+const university_entity_1 = require("./university/entities/university.entity");
+const group_entity_1 = require("./group/entities/group.entity");
+const student_entity_1 = require("./student/entities/student.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,9 +28,16 @@ exports.AppModule = AppModule = __decorate([
                 envFilePath: '.env',
                 isGlobal: true,
             }),
-            mongoose_1.MongooseModule.forRoot(String(process.env.MONGO_URI)),
-            user_module_1.UserModule,
-            post_module_1.PostModule,
+            typeorm_1.TypeOrmModule.forRoot({
+                type: 'postgres',
+                url: String(process.env.DB_URI),
+                synchronize: true,
+                autoLoadEntities: true,
+                entities: [university_entity_1.University, group_entity_1.Group, student_entity_1.Student],
+            }),
+            university_module_1.UniversityModule,
+            group_module_1.GroupModule,
+            student_module_1.StudentModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

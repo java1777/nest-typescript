@@ -9,8 +9,8 @@ async function bootstrap() {
     app.setGlobalPrefix('/api');
     app.useGlobalPipes(new common_1.ValidationPipe({
         whitelist: true,
-        forbidNonWhitelisted: true,
         transform: true,
+        forbidNonWhitelisted: true,
         errorHttpStatusCode: common_1.HttpStatus.UNPROCESSABLE_ENTITY,
     }));
     await app.listen(PORT, () => console.log('server running on port', PORT));

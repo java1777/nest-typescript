@@ -1,1 +1,0 @@
-{"version":3,"file":"getSuccessResponse.js","sourceRoot":"","sources":["../../src/utils/getSuccessResponse.ts"],"names":[],"mappings":";;;AAEO,MAAM,aAAa,GAAG,CACzB,IAAY,EACZ,aAAqB,GAAG,EACR,EAAE;IAClB,OAAO;QACH,UAAU;QACV,OAAO,EAAE,SAAS;QAClB,IAAI;KACP,CAAC;AACN,CAAC,CAAC;AATW,QAAA,aAAa,iBASxB"}
