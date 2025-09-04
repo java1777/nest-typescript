@@ -3,8 +3,9 @@ import { AppModule } from './app.module';
 import { HttpStatus, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
-  const PORT = Number(process.env.PORT);
+  const PORT = Number(process.env.PORT) || 3000;
   const app = await NestFactory.create(AppModule);
+  
   app.setGlobalPrefix('/api');
   app.useGlobalPipes(
     new ValidationPipe({
@@ -14,6 +15,8 @@ async function bootstrap() {
       errorHttpStatusCode: HttpStatus.UNPROCESSABLE_ENTITY,
     }),
   );
-  await app.listen(PORT, () => console.log('server running on port', PORT));
+  
+  await app.listen(PORT);
+  console.log(`Server running on port ${PORT}`);
 }
 bootstrap();
